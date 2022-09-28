@@ -1,5 +1,11 @@
+import Introduction from '../../layouts/Introduction';
+
 const Home = () => {
-    return <p>Home</p>;
+    return (
+        <main>
+            <Introduction/>
+        </main>
+    );
 };
 
 export default Home

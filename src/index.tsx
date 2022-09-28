@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {NextUIProvider} from '@nextui-org/react';
+import {createTheme, NextUIProvider} from '@nextui-org/react';
+
+const darkTheme = createTheme({
+    type: 'dark'
+});
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <NextUIProvider>
+        <NextUIProvider theme={darkTheme}>
             <App/>
         </NextUIProvider>
     </React.StrictMode>
