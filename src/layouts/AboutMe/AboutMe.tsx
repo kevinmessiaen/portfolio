@@ -135,7 +135,7 @@ const AboutMe = (props: AboutMeProps) => {
                     </Card.Body>
                     <Card.Footer>
                         <Badge>Tests</Badge>
-                        <Badge color="primary">SonarQubes</Badge>
+                        <Badge color="primary">SonarQube</Badge>
                         <Badge color="primary">Docker</Badge>
                         <Badge color="primary">Kubernetes</Badge>
                     </Card.Footer>
