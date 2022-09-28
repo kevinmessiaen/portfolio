@@ -1,25 +1,34 @@
-import {Button, Container, CSS, Spacer, Text} from '@nextui-org/react';
+import {Button, Container, Spacer, Text} from '@nextui-org/react';
 import {useTypeAnimation} from '../../effects';
 import {MdMail} from 'react-icons/md';
 import {BsLinkedin, BsSignal} from 'react-icons/bs';
+import {RefObject} from 'react';
 
-const Introduction = () => {
+export interface IntroductionProps {
+    aboutMeRef: RefObject<HTMLElement>
+}
+
+const Introduction = (props: IntroductionProps) => {
     const name = useTypeAnimation("Kevin Messiaen");
 
-    let fullpageIntroduction: CSS = {
-        height: 'calc(100vh - var(--nextui--navbarHeight))',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-    };
+    const executeScroll = () => props.aboutMeRef.current?.scrollIntoView()
+
+
     return (
-        <Container css={fullpageIntroduction}>
-            <Container css={{d: 'flex', flexWrap: 'nowrap'}}>
+        <Container css={{
+            height: 'calc(100vh - var(--nextui--navbarHeight))',
+            backgroundImage: 'url("introduction-background.png")',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+        }}
+                   display='flex' direction='column' justify='center' alignItems='flex-start'>
+            <Container display='flex' wrap='nowrap'>
                 <Button aria-label='LinkedIn' href='https://www.linkedin.com/in/kevin-messiaen/' target="_blank"
                         css={{background: '#0A66C2'}} auto icon={<BsLinkedin/>}>
                 </Button>
                 <Spacer x={2}/>
-                <Button aria-label='Send me an email' href='mailto:kevind.messiaen@gmail.com' target="_blank"
+                <Button aria-label='Send me an email' href='mailto:contact@kevin-messiaen.fr' target="_blank"
                         css={{background: '#EA4335'}} auto icon={<MdMail/>}>
                 </Button>
                 <Spacer x={2}/>
@@ -37,6 +46,10 @@ const Introduction = () => {
             <Text h4>
                 I am a Fullstack developer and Java expert!
             </Text>
+            <Spacer y={2}/>
+            <Button onClick={executeScroll} auto ghost>
+                Hire me!
+            </Button>
         </Container>
     )
 }
