@@ -15,8 +15,8 @@ const AboutMe = (props: AboutMeProps) => {
             My services
         </Text>
         <Text>
-            Hi, I'm Kevin Messiaen - a remote freelancer currently in Vietnam with over three years of professional
-            experience. I learned to program at the age of 14 as a hobby.
+            Hi, I'm Kevin Messiaen - a remote freelancer with over three years of professional
+            experience.
         </Text>
         <Text>
             I'm here to join your agile dev team or accompany you on your project to find the best solution and design
