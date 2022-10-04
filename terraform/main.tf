@@ -2,7 +2,7 @@ terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
-      version = "~> 2.13.0"
+      version = "~> 2.22.0"
     }
   }
 }
@@ -10,7 +10,7 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "portfolio" {
-  name = "kevin-messiaen-portfolio"
+  name = "kevin-messiaen-portfolio:latest"
   build {
     path       = ".."
     dockerfile = "docker/Dockerfile"
@@ -19,7 +19,7 @@ resource "docker_image" "portfolio" {
 }
 
 resource "docker_container" "portfolio" {
-  image = docker_image.portfolio.latest
+  image = docker_image.portfolio.image_id
   name  = "kevin-messiaen-portfolio"
   ports {
     internal = 80

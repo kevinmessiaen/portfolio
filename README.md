@@ -25,3 +25,6 @@ cd terraform && terraform init && terraform apply
 ```
 
 You can now access the application through [localhost](http://localhost:3000)
+
+## Credit
+
