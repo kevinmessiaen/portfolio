@@ -15,3 +15,13 @@ docker run -dp 3000:80 kevin-messiaen-portfolio
 ```
 
 You can now access the application through [localhost](http://localhost:3000)
+
+### Using Terraform
+
+You can run the application using [Terraform](https://www.terraform.io/):
+
+```
+cd terraform && terraform init && terraform apply
+```
+
+You can now access the application through [localhost](http://localhost:3000)
