@@ -3,8 +3,9 @@ on:
     branches:
       - main
 jobs:
-  test-runner:
+  build-docker:
     runs-on: self-hosted
     steps:
-      - name: Test runner
-        run: echo 'Hello World'
+      - uses: actions/checkout@v3
+      - name: Build the portfolio Docker image
+        run: docker build . --file docker/Dockerfile --tag kevin-messiaen-portfolio:$(date +%s)
