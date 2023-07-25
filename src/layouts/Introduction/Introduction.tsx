@@ -28,7 +28,7 @@ const Introduction = (props: IntroductionProps) => {
                         css={{background: '#0A66C2'}} auto icon={<BsLinkedin/>}>
                 </Button>
                 <Spacer x={2}/>
-                <Button aria-label='Send me an email' href='mailto:contact@kevin-messiaen.fr' target="_blank"
+                <Button aria-label='Send me an email' href='mailto:kevin.messiaen@icloud.com' target="_blank"
                         css={{background: '#EA4335'}} auto icon={<MdMail/>}>
                 </Button>
                 <Spacer x={2}/>

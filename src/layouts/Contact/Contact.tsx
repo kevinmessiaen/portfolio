@@ -10,7 +10,7 @@ const Contact = () => {
             </Text>
             <Grid.Container gap={2} justify="center">
                 <Grid xs={12} sm={6} md={4}>
-                    <Card isPressable onClick={() => openUrl('mailto:contact@kevin-messiaen.fr')}>
+                    <Card isPressable onClick={() => openUrl('mailto:kevin.messiaen@icloud.com')}>
                         <Card.Body css={{p: 0}}>
                             <Card.Image
                                 src='mailbox.jpg'
